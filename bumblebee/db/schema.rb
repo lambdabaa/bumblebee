@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(:version => 20120708223847) do
 
   create_table "pings", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "latitude"
-    t.integer  "longitude"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.decimal  "latitude",   :precision => 7, :scale => 4
+    t.decimal  "longitude",  :precision => 7, :scale => 4
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
   end
 
   create_table "users", :force => true do |t|
