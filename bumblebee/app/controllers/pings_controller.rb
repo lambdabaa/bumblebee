@@ -16,6 +16,6 @@ class PingsController < ApplicationController
   def show
     @ping = Ping.find(params[:id])
     response = Foursquare.venue_search(@ping.latitude, @ping.longitude)
-    render :json => response.body.to_json
+    render :json => response.body
   end
 end
